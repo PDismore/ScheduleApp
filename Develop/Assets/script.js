@@ -1,8 +1,11 @@
+var moment = require ('moment'); 
+moment().format();
 
 function go (){
-    let currentTime = moment().format("HH:mm");
+    var currentTime = moment().format("HH:mm");
 console.log(currentTime)
 }
 
 
 go;
+console.log(go);
