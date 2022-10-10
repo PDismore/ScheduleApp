@@ -1,7 +1,14 @@
-// var moment = require ('moment')
-// moment().format(); 
+// Jumbotron Function (sets time in jumbotron)
 
-function go(){
+setInterval(function () {
+    document.getElementById('currentDay').innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
+}, 1000);
+
+
+
+
+// function creating the cards for the schedule
+function cardCreate(){
     var currentTime = 12;
     for (var time =9; time<19; time++){
         var id = time
@@ -27,7 +34,8 @@ function go(){
 
     }
 }
+console.log(moment);
 // document.getElementById('currentDay').textContent = moment().format('MMM Do YYYY, h:mm:ss a');
 // console.log(moment().format('MMM Do YYYY, h:mm:ss a'));
-go();
+cardCreate();
 // console.log(go);
