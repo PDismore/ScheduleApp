@@ -9,7 +9,7 @@ setInterval(function () {
 
 // function creating the cards for the schedule
 function cardCreate(){
-    var currentTime = 12;
+    var currentTime = moment().hours();
     for (var time =9; time<19; time++){
         var id = time
         var hourlyRow = $("<form>")
@@ -23,19 +23,18 @@ function cardCreate(){
             var contents = $('<textarea>')
                 .addClass('full col-10')
                 if (time > currentTime) contents.addClass('future')
-
+                
+                // Saving / local storage button create
         var submitButton = $("<button> ")
             .addClass("col-1 submitButton");
-            var saveImage = $('<i class="bi bi-save-fill"></i>')
+            var saveImage = $('<i class="bi bi-save"></i>')
             submitButton.append(saveImage);
 
         hourlyRow.append(timeBox, contents, submitButton);
+
     console.log(id);
 
     }
 }
-console.log(moment);
-// document.getElementById('currentDay').textContent = moment().format('MMM Do YYYY, h:mm:ss a');
-// console.log(moment().format('MMM Do YYYY, h:mm:ss a'));
+
 cardCreate();
-// console.log(go);
