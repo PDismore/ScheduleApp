@@ -33,15 +33,7 @@ THEN the saved events persist
 
 * Loops, if statements 
 
-* Callbacks, event Listeners
 
-* return statements 
-
-* Split methods 
-
-* Semantics and logical statements 
-
-* setIntervals and setTimeouts
 
 
 ## Links
