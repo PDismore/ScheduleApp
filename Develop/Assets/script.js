@@ -23,14 +23,19 @@ function cardCreate(){
             var contents = $('<textarea>')
                 .addClass('full col-10')
                 if (time > currentTime) contents.addClass('future')
+                else if(time < currentTime) contents.addClass('past')
+                else contents.addClass('present');
                 
                 // Saving / local storage button create
         var submitButton = $("<button> ")
-            .addClass("col-1 submitButton");
+        .addClass("col-1 submitButton");
+        submitButton.id= 'saveBtn';
             var saveImage = $('<i class="bi bi-save"></i>')
             submitButton.append(saveImage);
 
         hourlyRow.append(timeBox, contents, submitButton);
+        // var input = document.getElementById('saveBtn');
+        // localStorage.setItem("contents", input.val());
 
     console.log(id);
 
